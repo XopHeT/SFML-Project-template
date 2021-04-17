@@ -22,7 +22,6 @@ include_directories(SFML/include)
 add_subdirectory(SFML)
 
 set(SFML_STATIC_LIBRARIES FALSE)
-set(SFML_DIR "${PROJECT_BINARY_DIR}/SFML")
 set(EXECUTABLE_NAME ${CMAKE_PROJECT_NAME})
 add_executable(${EXECUTABLE_NAME} WIN32 main.cpp)
 
