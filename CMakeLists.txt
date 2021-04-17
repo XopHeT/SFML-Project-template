@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.19)
 set(CMAKE_CXX_STANDARD 17)
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 # Enable debug symbols by default
 # must be done before project() statement
@@ -19,7 +20,7 @@ configure_file(
 )
 include_directories("${PROJECT_BINARY_DIR}")
 include_directories(SFML/include)
-add_subdirectory(SFML)
+add_subdirectory("${PROJECT_SOURCE_DIR}/SFML")
 
 set(SFML_STATIC_LIBRARIES FALSE)
 set(EXECUTABLE_NAME ${CMAKE_PROJECT_NAME})
